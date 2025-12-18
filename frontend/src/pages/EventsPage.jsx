@@ -19,7 +19,7 @@ export default function EventsPage() {
   const [filterStatus, setFilterStatus] = useState('all'); // all, active, upcoming, past
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  
+
 
   // Animation CSS
   const animationCSS = `
@@ -68,68 +68,68 @@ export default function EventsPage() {
   const icons = {
     calendar: (color = '#4F46E5') => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M8 7V3M16 7V3M7 11H17M5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 7V3M16 7V3M7 11H17M5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     location: (color = '#6B7280') => (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     users: (color = '#6B7280') => (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     search: (color = '#6B7280') => (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     filter: (color = '#6B7280') => (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     plus: (color = '#FFFFFF') => (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M12 5V19M5 12H19" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 5V19M5 12H19" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     edit: (color = '#6B7280') => (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M18.5 2.5C18.8978 2.10217 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10217 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10217 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M18.5 2.5C18.8978 2.10217 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10217 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10217 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     stats: (color = '#6B7280') => (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M18 20V10M12 20V4M6 20V14" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M18 20V10M12 20V4M6 20V14" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     scan: (color = '#6B7280') => (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M8 3H7C5.89543 3 5 3.89543 5 5V8M21 8V7C21 5.89543 20.1046 5 19 5H16M16 21H19C20.1046 21 21 20.1046 21 19V16M5 16V19C5 20.1046 5.89543 21 7 21H8" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M9 9H15V15H9V9Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 3H7C5.89543 3 5 3.89543 5 5V8M21 8V7C21 5.89543 20.1046 5 19 5H16M16 21H19C20.1046 21 21 20.1046 21 19V16M5 16V19C5 20.1046 5.89543 21 7 21H8" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 9H15V15H9V9Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     clock: (color = '#6B7280') => (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     chevronDown: (color = '#6B7280') => (
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-        <path d="M6 9L12 15L18 9" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M6 9L12 15L18 9" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     spinner: (color = '#4F46E5') => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke={color} strokeWidth="4" strokeOpacity="0.3"/>
+        <circle cx="12" cy="12" r="10" stroke={color} strokeWidth="4" strokeOpacity="0.3" />
         <path d="M12 2C15.0423 2 17.7821 3.36964 19.6154 5.53846" stroke={color} strokeWidth="4" strokeLinecap="round">
           <animateTransform
             attributeName="transform"
@@ -176,13 +176,13 @@ export default function EventsPage() {
         endDate: form.endDate,
         description: form.description,
       };
-      
+
       await createEvent(payload);
       setSuccess('Event created successfully!');
       setForm({ name: '', location: '', startDate: '', endDate: '', description: '' });
       setShowCreateForm(false);
       load();
-      
+
       // Auto-hide success message
       setTimeout(() => setSuccess(''), 3000);
     } catch (err) {
@@ -197,7 +197,7 @@ export default function EventsPage() {
     const now = new Date();
     const start = new Date(event.startDate);
     const end = new Date(event.endDate);
-    
+
     if (now < start) return 'upcoming';
     if (now >= start && now <= end) return 'active';
     return 'past';
@@ -206,10 +206,10 @@ export default function EventsPage() {
   // Filter and search events
   const filteredEvents = events.filter(event => {
     const matchesSearch = event.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         event.location.toLowerCase().includes(searchTerm.toLowerCase());
-    
+      event.location.toLowerCase().includes(searchTerm.toLowerCase());
+
     if (filterStatus === 'all') return matchesSearch;
-    
+
     const status = getEventStatus(event);
     return matchesSearch && status === filterStatus;
   });
@@ -224,9 +224,9 @@ export default function EventsPage() {
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString('en-US', {
       weekday: 'short',
-      month: 'short', 
+      month: 'short',
       day: 'numeric',
       year: 'numeric',
       hour: '2-digit',
@@ -244,7 +244,7 @@ export default function EventsPage() {
       <style>{animationCSS}</style>
 
       <div className="animate-fade-in" style={{
-        padding: '24px'
+        padding: '10px'
       }}>
         {/* Header Section */}
         <div style={{
@@ -257,7 +257,7 @@ export default function EventsPage() {
         }}>
           <div>
             <h1 style={{
-              fontSize: '32px',
+              fontSize: '1.2rem',
               fontWeight: '700',
               color: '#1F2937',
               margin: '0 0 8px 0'
@@ -272,7 +272,7 @@ export default function EventsPage() {
               Create, manage, and monitor all your events in one place
             </p>
           </div>
-          
+
           <button
             onClick={() => setShowCreateForm(!showCreateForm)}
             style={{
@@ -317,7 +317,7 @@ export default function EventsPage() {
             { label: 'Upcoming', value: stats.upcoming, color: '#F59E0B', icon: icons.calendar },
             { label: 'Completed', value: stats.past, color: '#6B7280', icon: icons.calendar },
           ].map((stat, index) => (
-            <div 
+            <div
               key={stat.label}
               className="animate-slide-up"
               style={{
@@ -374,7 +374,7 @@ export default function EventsPage() {
           <div className="animate-slide-up" style={{
             background: '#FFFFFF',
             borderRadius: '16px',
-            padding: '32px',
+            padding: '12px',
             marginBottom: '32px',
             border: '1px solid #E5E7EB',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)'
@@ -418,7 +418,7 @@ export default function EventsPage() {
                 marginBottom: '24px'
               }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 9V12M12 15H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 9V12M12 15H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span style={{ color: '#DC2626', fontWeight: '500' }}>{error}</span>
               </div>
@@ -436,7 +436,7 @@ export default function EventsPage() {
                 marginBottom: '24px'
               }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M20 6L9 17L4 12" stroke="#059669" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M20 6L9 17L4 12" stroke="#059669" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span style={{ color: '#059669', fontWeight: '500' }}>{success}</span>
               </div>
@@ -683,7 +683,7 @@ export default function EventsPage() {
         <div className="animate-slide-up" style={{
           background: '#FFFFFF',
           borderRadius: '16px',
-          padding: '32px',
+          padding: '12px',
           border: '1px solid #E5E7EB',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)'
         }}>
@@ -842,7 +842,7 @@ export default function EventsPage() {
                 No events found
               </h3>
               <p style={{ margin: 0, opacity: 0.8 }}>
-                {searchTerm || filterStatus !== 'all' 
+                {searchTerm || filterStatus !== 'all'
                   ? 'Try adjusting your search or filter'
                   : 'Create your first event to get started'}
               </p>
@@ -850,7 +850,9 @@ export default function EventsPage() {
           ) : (
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+              '@media (max-width: 768px)': {
+                gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+              },
               gap: '24px'
             }}>
               {filteredEvents.map((event, index) => {
@@ -863,7 +865,7 @@ export default function EventsPage() {
                 const colors = statusColors[status];
 
                 return (
-                  <div 
+                  <div
                     key={event._id}
                     className="animate-slide-up"
                     style={{
@@ -886,7 +888,7 @@ export default function EventsPage() {
                   >
                     {/* Event Header */}
                     <div style={{
-                      padding: '24px 24px 20px 24px',
+                      padding: '24px 12px 20px 12px',
                       borderBottom: '1px solid #F3F4F6'
                     }}>
                       <div style={{
@@ -963,7 +965,7 @@ export default function EventsPage() {
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                           {icons.clock()}
                           <span style={{ fontSize: '14px', color: '#6B7280' }}>
-                            {formatDate(event.startDate)} - {formatDate(event.endDate)}
+                            {formatDate(event.startDate)} <br /> {formatDate(event.endDate)}
                           </span>
                         </div>
                         {event.description && (
@@ -973,8 +975,8 @@ export default function EventsPage() {
                             margin: '8px 0 0 0',
                             lineHeight: '1.5'
                           }}>
-                            {event.description.length > 100 
-                              ? `${event.description.substring(0, 100)}...` 
+                            {event.description.length > 100
+                              ? `${event.description.substring(0, 100)}...`
                               : event.description}
                           </p>
                         )}

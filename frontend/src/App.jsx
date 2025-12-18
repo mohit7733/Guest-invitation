@@ -203,7 +203,7 @@ function Layout({ children }) {
               alignItems: 'center',
               gap: '12px'
             }}>
-              <button
+              {/* <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
@@ -226,7 +226,7 @@ function Layout({ children }) {
                 }}
               >
                 {sidebarOpen ? icons.close('#FFFFFF') : icons.menu('#FFFFFF')}
-              </button>
+              </button> */}
 
               <div style={{
                 display: 'flex',
@@ -246,7 +246,7 @@ function Layout({ children }) {
                   {icons.calendar()}
                 </div>
                 <h1 style={{
-                  fontSize: '20px',
+                  fontSize: '1rem',
                   fontWeight: '700',
                   margin: 0,
                   background: 'linear-gradient(90deg, #FFFFFF 0%, #E0E7FF 100%)',
@@ -668,10 +668,11 @@ function Layout({ children }) {
         {/* Main Content */}
         <main style={{
           flex: 1,
-          padding: '24px',
+          padding: '10px',
           animation: 'fadeIn 0.5s ease-out',
           marginLeft: user ? (sidebarOpen ? '280px' : '0') : '0',
           transition: 'margin-left 0.3s ease',
+          width: '100%',
           '@media (min-width: 768px)': {
             marginLeft: user ? '280px' : '0'
           }
